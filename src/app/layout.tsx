@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { CookieConsent } from "@ai-whisperers/seo"
+import { WhatsAppFloat } from "@ai-whisperers/whatsapp"
 
 export const metadata: Metadata = {
   title: "El Gato Siamés — Stand Up Paraguay",
@@ -26,7 +28,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      <body className="antialiased">{children}</body>
+      <body className="antialiased">{children}
+        <WhatsAppFloat />
+        <CookieConsent />
+      </body>
     </html>
   );
 }
